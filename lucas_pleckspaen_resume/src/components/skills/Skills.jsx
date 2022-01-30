@@ -4,7 +4,7 @@ import SoftSkillsList from './components/SoftSkillsList';
 
 const Skills = () => (
   <>
-    <h1 className="text-center text-3xl font-bold">SKILLS</h1>
+    <h2 id="skills">SKILLS</h2>
     <div className="grid grid-cols-2">
       <SoftSkillsList />
       <HardSkillsList />

@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'zen';
+  src: url(/src/assets/fonts/ZenKurenaido-Regular.ttf);
+}
+@font-face {
+  font-family: 'cabin';
+  src: url(/src/assets/fonts/Cabin-Regular.ttf);
+}
+
+body {
+  font-family: 'cabin';
+  background-color: #04151f;
+  --text-color: rgb(253, 253, 253);
+  color: var(--text-color);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'zen';
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 2%;
+  font-family: 'zen';
+}
+
+.new-line {
+  white-space: pre-line;
+}

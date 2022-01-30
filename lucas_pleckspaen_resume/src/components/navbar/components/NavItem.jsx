@@ -1,28 +1,28 @@
 const navItems = [
   {
     id: 1,
-    name: 'Home',
-    link: '#home',
+    name: 'About',
+    link: '/',
   },
   {
     id: 2,
-    name: 'About',
-    link: '#about',
+    name: 'Skills',
+    link: 'skills',
   },
   {
     id: 3,
-    name: 'Education',
-    link: '#education',
+    name: 'Career',
+    link: 'career',
   },
   {
     id: 4,
-    name: 'Experience',
-    link: '#experience',
+    name: 'Portfolio',
+    link: 'portfolio',
   },
   {
     id: 5,
     name: 'Contact',
-    link: '#contact',
+    link: 'contact',
   },
 ];
 

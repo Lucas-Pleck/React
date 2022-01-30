@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from './components/navbar/Navbar';
-import HeroBanner from './components/hero_banner/HeroBanner';
-import AboutMe from './components/AboutMe/AboutMe';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/home/Home';
 import Skills from './components/skills/Skills';
+import Career from './components/career/Career';
 
 const App = () => (
-  <div className="py-10 max-w-7xl mx-auto">
+  <div className="py-4 max-w-7xl mx-auto">
     <header>
       <Navbar />
     </header>
@@ -13,21 +14,11 @@ const App = () => (
       <div className="sm:px-6 lg:px-8">
         <div className="px-4 py-8 sm:px-0">
           <div className="border-4 border-dashed border-gray-200 rounded-lg min-h-96">
-            <HeroBanner />
-          </div>
-        </div>
-      </div>
-      <div className="sm:px-6 lg:px-8">
-        <div className="px-4 sm:px-0">
-          <div className="border-4 border-dashed border-gray-200 rounded-lg h-fit">
-            <AboutMe />
-          </div>
-        </div>
-      </div>
-      <div className="sm:px-6 lg:px-8">
-        <div className="px-4 py-8 sm:px-0">
-          <div className="border-4 border-dashed border-gray-200 rounded-lg h-fit">
-            <Skills />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/career" element={<Career />} />
+            </Routes>
           </div>
         </div>
       </div>

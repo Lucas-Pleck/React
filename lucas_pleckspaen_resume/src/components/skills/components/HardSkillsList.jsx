@@ -5,10 +5,10 @@ const HardSkillsList = () => (
   <div className="flex">
     <h3>HARDSKILLS</h3>
     <div className="grid grid-cols-5 w-full mx-5">
-      {hardSkillsData.map(({ id, title, img, link }) => (
+      {hardSkillsData.map(({ id, title, img }) => (
         <li className="list-none" key={id}>
           <div className="img-container p-1 w-32">
-            <img src={img} alt={title}></img>
+            <img src={img} alt={title} />
             <p className="text-center text-sm">{title}</p>
           </div>
         </li>

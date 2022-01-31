@@ -14,6 +14,8 @@ body {
   font-family: 'cabin';
   background-color: #04151f;
   --text-color: rgb(253, 253, 253);
+  --link-color: #021cb0;
+  --nav-color: #ccac00;
   color: var(--text-color);
 }
 
@@ -21,6 +23,7 @@ h2 {
   text-align: center;
   font-size: 2.2rem;
   font-family: 'zen';
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -30,6 +33,18 @@ h3 {
   font-family: 'zen';
 }
 
+a:hover {
+  color: var(--nav-color);
+}
+
 .new-line {
   white-space: pre-line;
+}
+
+.css-1f6lpc1-ShowMore {
+  color: var(--link-color);
+}
+
+.card-sub-title {
+  color: var(--link-color);
 }

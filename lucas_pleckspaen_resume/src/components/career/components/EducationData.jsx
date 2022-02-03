@@ -13,7 +13,7 @@ const educationData = [
     cardDetailedText: `- PowerShell scripts on Windows Server
                       - Learn about AGILE Project Management
                       - Manage your project with a Scrum Team
-                      - Ansible to automate configuration tasks
+                      - Ansible to automate configuration Products
                       - Go Full Stack with Node.js, Express and MongoDB
                       - Create a professional website with WordPress 5
                       - Start programming with Java`,

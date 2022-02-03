@@ -79,10 +79,10 @@ The fix is to kill the process and rerun `npm start`.
 
 1.  Then run
     ```Shell
-    taskkill /F /PID YOUR_PID
+    Productkill /F /PID YOUR_PID
     ```
     > e.g. given the output from the example above, `YOUR_PID` is `28344`, hence
-    > that would mean you would run `taskkill /F /PID 28344`
+    > that would mean you would run `Productkill /F /PID 28344`
 
 ## Issue with local caching when running in production mode (F5 / ctrl+F5 / cmd+r weird behavior)
 

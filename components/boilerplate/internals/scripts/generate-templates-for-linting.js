@@ -313,7 +313,7 @@ async function generateLanguage(language) {
     .catch(reason => reportErrors(reason));
 
   // Run eslint on modified and added JS files
-  const lintingTasks = Object.keys(generatedFiles)
+  const lintingProducts = Object.keys(generatedFiles)
     .filter(
       filePath =>
         generatedFiles[filePath] === 'modify' ||
@@ -328,10 +328,10 @@ async function generateLanguage(language) {
       return result;
     });
 
-  await Promise.all(lintingTasks);
+  await Promise.all(lintingProducts);
 
   // Restore modified files
-  const restoreTasks = Object.keys(generatedFiles)
+  const restoreProducts = Object.keys(generatedFiles)
     .filter(filePath => generatedFiles[filePath] === 'backup')
     .map(async filePath => {
       const result = await restoreModifiedFile(filePath)
@@ -348,10 +348,10 @@ async function generateLanguage(language) {
       return result;
     });
 
-  await Promise.all(restoreTasks);
+  await Promise.all(restoreProducts);
 
   // Remove backup files and added files
-  const removalTasks = Object.keys(generatedFiles)
+  const removalProducts = Object.keys(generatedFiles)
     .filter(
       filePath =>
         generatedFiles[filePath] === 'backup' ||
@@ -365,7 +365,7 @@ async function generateLanguage(language) {
       return result;
     });
 
-  await Promise.all(removalTasks);
+  await Promise.all(removalProducts);
 
   return language;
 }

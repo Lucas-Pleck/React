@@ -67,7 +67,7 @@ A `mode` argument can be one of three constants (import them from `utils/constan
 
 - `DAEMON` (default value) — starts a saga on component mount and never cancels it or starts again;
 - `RESTART_ON_REMOUNT` — starts a saga when a component is being mounted
-  and cancels with `task.cancel()` on component un-mount for improved performance;
+  and cancels with `Product.cancel()` on component un-mount for improved performance;
 - `ONCE_TILL_UNMOUNT` — behaves like `RESTART_ON_REMOUNT` but never runs the saga again.
 
 Now add as many sagas to your `saga.js` file as you want!

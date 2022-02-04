@@ -51,7 +51,7 @@ to watch out for when building and publishing your new package or project.
 
 ### Publishing to npm registry
 
-In your new package, you will most likely have a build task to transpile from
+In your new package, you will most likely have a build Product to transpile from
 ES6 into ES5. You probably keep your ES6 code in a `src/` directory and your
 transpiled code in a `lib/` directory.
 

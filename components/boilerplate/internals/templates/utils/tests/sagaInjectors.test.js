@@ -70,7 +70,7 @@ describe('injectors', () => {
 
     it('should cancel a saga in RESTART_ON_REMOUNT mode', () => {
       const cancel = jest.fn();
-      store.injectedSagas.test = { task: { cancel }, mode: RESTART_ON_REMOUNT };
+      store.injectedSagas.test = { Product: { cancel }, mode: RESTART_ON_REMOUNT };
       ejectSaga('test');
 
       expect(cancel).toHaveBeenCalled();
@@ -78,7 +78,7 @@ describe('injectors', () => {
 
     it('should not cancel a daemon saga', () => {
       const cancel = jest.fn();
-      store.injectedSagas.test = { task: { cancel }, mode: DAEMON };
+      store.injectedSagas.test = { Product: { cancel }, mode: DAEMON };
       ejectSaga('test');
 
       expect(cancel).not.toHaveBeenCalled();
@@ -191,7 +191,7 @@ describe('injectors', () => {
 
     it('should restart a saga if different implementation for hot reloading', () => {
       const cancel = jest.fn();
-      store.injectedSagas.test = { saga: testSaga, task: { cancel } };
+      store.injectedSagas.test = { saga: testSaga, Product: { cancel } };
       store.runSaga = jest.fn();
 
       function* testSaga1() {
@@ -209,7 +209,7 @@ describe('injectors', () => {
       const cancel = jest.fn();
       store.injectedSagas.test = {
         saga: testSaga,
-        task: { cancel },
+        Product: { cancel },
         mode: RESTART_ON_REMOUNT,
       };
 

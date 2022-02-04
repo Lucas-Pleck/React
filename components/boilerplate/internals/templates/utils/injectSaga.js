@@ -12,7 +12,7 @@ import getInjectors from './sagaInjectors';
  * @param {string} [mode] By default (constants.DAEMON) the saga will be started
  * on component mount and never canceled or started again. Another two options:
  *   - constants.RESTART_ON_REMOUNT — the saga will be started on component mount and
- *   cancelled with `task.cancel()` on component unmount for improved performance,
+ *   cancelled with `Product.cancel()` on component unmount for improved performance,
  *   - constants.ONCE_TILL_UNMOUNT — behaves like 'RESTART_ON_REMOUNT' but never runs it again.
  *
  */

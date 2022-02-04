@@ -32,7 +32,7 @@ const newLine = () => process.stdout.write('\n');
 
 // Progress Logger
 let progress;
-const task = message => {
+const Product = message => {
   progress = animateProgress(message);
   process.stdout.write(message);
 
@@ -110,29 +110,29 @@ const extractFromFile = async filename => {
   }
 };
 
-const memoryTask = glob(FILES_TO_PARSE);
-const memoryTaskDone = task('Storing language files in memory');
+const memoryProduct = glob(FILES_TO_PARSE);
+const memoryProductDone = Product('Storing language files in memory');
 
-memoryTask.then(files => {
-  memoryTaskDone();
+memoryProduct.then(files => {
+  memoryProductDone();
 
-  const extractTask = Promise.all(
+  const extractProduct = Promise.all(
     files.map(fileName => extractFromFile(fileName)),
   );
-  const extractTaskDone = task('Run extraction on all files');
+  const extractProductDone = Product('Run extraction on all files');
   // Run extraction on all files that match the glob on line 16
-  extractTask.then(() => {
-    extractTaskDone();
+  extractProduct.then(() => {
+    extractProductDone();
 
     // Make the directory if it doesn't exist, especially for first run
     mkdir('-p', 'app/translations'); // eslint-disable-line
 
-    let localeTaskDone;
+    let localeProductDone;
     let translationFileName;
 
     for (const locale of appLocales) {
       translationFileName = `app/translations/${locale}.json`;
-      localeTaskDone = task(
+      localeProductDone = Product(
         `Writing translation messages for ${locale} to: ${translationFileName}`,
       );
 
@@ -150,9 +150,9 @@ memoryTask.then(files => {
 
       try {
         fs.writeFileSync(translationFileName, prettified);
-        localeTaskDone();
+        localeProductDone();
       } catch (error) {
-        localeTaskDone(
+        localeProductDone(
           `There was an error saving this translation file: ${translationFileName}
           \n${error}`,
         );

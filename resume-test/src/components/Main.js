@@ -19,7 +19,7 @@ overflow:hidden;
 position: relative;
 
 h2,h3,h4,h5,h6{
-  font-family:'Karla', sans-serif ;
+  font-family:'Zen Kurenaido', sans-serif ;
   font-weight:500;
 }
 `
@@ -54,7 +54,7 @@ text-decoration: none;
 z-index:1;
 `
 const SKILLS = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index:1;
 `
@@ -172,7 +172,7 @@ const Main = () => {
                     ABOUT
                 </motion.h2>
             </ABOUT>
-            <SKILLS to="/skills">
+            <SKILLS to="/skills" click={+click}>
                 <motion.h2
                 initial={{
                     y:200,

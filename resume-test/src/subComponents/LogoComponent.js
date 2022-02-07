@@ -8,7 +8,7 @@ import { DarkTheme } from '../components/Themes'
 const Logo = styled.h1`
 display: inline-block;
 color: ${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
-font-family: 'Pacifico',cursive;
+font-family: 'Zen Kurenaido';
 
 position: fixed;
 left: 2rem;
@@ -19,7 +19,7 @@ z-index:3;
 const LogoComponent = (props) => {
     return (
         <Logo color={props.theme}>
-          LP
+          Lucas<br/>Pleckspaen
         </Logo>
     )
 }

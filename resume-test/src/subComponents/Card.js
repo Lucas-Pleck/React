@@ -33,7 +33,7 @@ font-size: calc(1em + 0.5vw);
 
 const Description = styled.h2`
 font-size: calc(0.8em + 0.3vw);
-font-family: 'Karla',sans-serif;
+font-family: 'Zen Kurenaido',sans-serif;
 font-weight: 500;
 `
 const Tags = styled.div`

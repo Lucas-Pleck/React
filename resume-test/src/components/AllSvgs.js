@@ -1,18 +1,20 @@
 export const PowerBtn = (props) => {
   return (
-    <svg
+
+    <svg 
       aria-hidden="true"
       data-prefix="fas"
       data-icon="power-off"
       className="prefix__svg-inline--fa prefix__fa-power-off prefix__fa-w-16"
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24" 
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      {...props}
-    >
-      <path
-        fill={props.fill}
-        d="M400 54.1c63 45 104 118.6 104 201.9 0 136.8-110.8 247.7-247.5 248C120 504.3 8.2 393 8 256.4 7.9 173.1 48.9 99.3 111.8 54.2c11.7-8.3 28-4.8 35 7.7L162.6 90c5.9 10.5 3.1 23.8-6.6 31-41.5 30.8-68 79.6-68 134.9-.1 92.3 74.5 168.1 168 168.1 91.6 0 168.6-74.2 168-169.1-.3-51.8-24.7-101.8-68.1-134-9.7-7.2-12.4-20.5-6.5-30.9l15.8-28.1c7-12.4 23.2-16.1 34.8-7.8zM296 264V24c0-13.3-10.7-24-24-24h-32c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24z"
-      />
+      >
+        <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
     </svg>
   )
 }
@@ -36,12 +38,20 @@ export const Github = (props) => {
       )
 }
 
-export const LinkedIn = () => {
+export const LinkedIn = (props) => {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      <svg 
+      aria-hidden="true"
+      data-prefix="fab"
+      data-icon="linkedin"
+      className="prefix__svg-inline--fa prefix__fa-linkedin prefix__fa-w-16"
+      xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
       width="30" height="30"
-      viewBox="0 0 30 30">
-      <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path></svg>
+      viewBox="0 0 30 30"
+      {...props}>
+      <path 
+        fill={props.fill}
+        d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path></svg>
       )
 }
 
@@ -66,6 +76,7 @@ export const Facebook = (props) => {
 
 export const YinYang = (props) => {
     return (
+      
         <svg
           aria-hidden="true"
           data-prefix="fas"

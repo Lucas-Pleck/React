@@ -7,7 +7,7 @@ import { Design, Develope} from './AllSvgs';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import PowerButton from '../subComponents/PowerButton';
-import ParticleComponent from '../subComponents/ParticleComponent';
+
 import BigTitle from '../subComponents/BigTitlte'
 
 const Box = styled.div`
@@ -90,30 +90,29 @@ const MySkillsPage = () => {
 <LogoComponent theme='light'/>
 <SocialIcons theme='light'/>
 <PowerButton />
-<ParticleComponent theme='light' />
             <Main>
 <Title>
-    <Design width={40} height={40} /> Designer
+    <Design width={40} height={40} /> Soft Skills
 </Title>
 <Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
+    jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.
 </Description>
 <Description>
-<strong>I like to Design</strong>
+<strong>Lorem amet</strong>
 <ul>
     <li>
-        Web Design
+        zfzplk fzp^k
     </li>
     <li>
-        Mobile Apps
+        zfzplk fzp^k
     </li>
 </ul>
 </Description>
 <Description>
-<strong>Tools</strong>
+<strong>zfzplk fzp^k</strong>
 <ul>
     <li>
-       Figma
+    zfzplk fzp^k
     </li>
     
 </ul>
@@ -122,21 +121,21 @@ I love to create design which speaks, Keep it clean, minimal and simple.
             </Main>
             <Main>
 <Title>
-    <Develope width={40} height={40} /> Frontend Developer
+    <Develope width={40} height={40} /> Hard Skills
 </Title>
 <Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+    jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.
 </Description>
 <Description>
 <strong>Skills</strong>
 <p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+    Html, Css, Js, React, , Tailwind, etc.
 </p>
 </Description>
 <Description>
-<strong>Tools</strong>
+<strong>jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.</strong>
 <p>
-VScode, Github, Codepen etc.
+jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.
 </p>
 </Description>
 

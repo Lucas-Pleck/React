@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import SocialIcons from '../subComponents/SocialIcons'
-import { YinYang } from './AllSvgs'
+import { Rudder } from './AllSvgs'
 import Intro from './Intro'
 ;
 
@@ -20,7 +20,7 @@ position: relative;
 
 h2,h3,h4,h5,h6{
   font-family:'Zen Kurenaido', sans-serif ;
-  font-weight:500;
+  font-weight:bold;
 }
 `
 
@@ -97,7 +97,7 @@ align-items: center;
 transition: all 1s ease;
 
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 3s linear;
 }
 
 &>:last-child{
@@ -109,7 +109,7 @@ transition: all 1s ease;
 const DarkDiv = styled.div`
 position: absolute;
 top: 0;
-background-color: #000;
+background-color: #084276;
 bottom: 0;
 right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
@@ -134,8 +134,8 @@ const Main = () => {
             <SocialIcons theme={click ? 'dark' :'light'} />
            
             <Center click={click}>
-                <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                <span>click here</span>
+                <Rudder  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                <span>Click Here</span>
             </Center>
 
             <Contact target="_blank" to={{pathname:"mailto:lucas.pleckspaen@gmail.com"}}>
@@ -188,7 +188,7 @@ const Main = () => {
                     SKILLS
                 </motion.h2>
             </SKILLS>
-            <PORTFOLIO to="/about" click={+click}>
+            <PORTFOLIO to="/portfolio" click={+click}>
                 <motion.h2
                 initial={{
                     y:200,
@@ -204,7 +204,7 @@ const Main = () => {
                     PORTFOLIO
                 </motion.h2>
             </PORTFOLIO>
-            <CAREER to="/about" click={+click}>
+            <CAREER to="/career" click={+click}>
                 <motion.h2
                 initial={{
                     y:200,

@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import LogoComponent from '../subComponents/LogoComponent';
-import PowerButton from '../subComponents/PowerButton';
+import BackBtn from '../subComponents/BackButton';
 import SocialIcons from '../subComponents/SocialIcons';
-import { Rudder } from './AllSvgs';
-import Intro from './Intro';
+import { Rudder } from '../components/AllSvgs';
+import Intro from '../components/Intro';
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -127,7 +127,7 @@ const Main = () => {
     <MainContainer>
       <DarkDiv click={click} />
       <Container>
-        <PowerButton />
+        <BackBtn />
         <LogoComponent theme={click ? 'dark' : 'light'} />
         <SocialIcons theme={click ? 'dark' : 'light'} />
 
@@ -138,7 +138,7 @@ const Main = () => {
             height={click ? 120 : 200}
             fill="currentColor"
           />
-          <span>Click Here</span>
+          <span className="text-[#313131]">Click Here</span>
         </Center>
 
         <Contact target="_blank" to={{ pathname: 'mailto:lucas.pleckspaen@gmail.com' }}>
@@ -187,21 +187,6 @@ const Main = () => {
               SKILLS
             </motion.h2>
           </SKILLS>
-          <PORTFOLIO to="/portfolio" click={+click}>
-            <motion.h2
-              initial={{
-                y: 200,
-                transition: { type: 'spring', duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: 'spring', duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}>
-              PORTFOLIO
-            </motion.h2>
-          </PORTFOLIO>
           <CAREER to="/career" click={+click}>
             <motion.h2
               initial={{
@@ -217,6 +202,21 @@ const Main = () => {
               CAREER
             </motion.h2>
           </CAREER>
+          <PORTFOLIO to="/portfolio" click={+click}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}>
+              PORTFOLIO
+            </motion.h2>
+          </PORTFOLIO>
         </BottomBar>
       </Container>
       {click ? <Intro click={click} /> : null}

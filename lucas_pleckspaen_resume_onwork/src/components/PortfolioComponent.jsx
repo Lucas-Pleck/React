@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/destructuring-assignment */
 import { motion } from 'framer-motion';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -43,6 +45,7 @@ const Title = styled.h3`
   padding-top: 1rem;
   font-family: 'Zen Kurenaido', sans-serif;
   font-weight: 700;
+  font-size: 1.4em;
   border-bottom: 1px solid ${(props) => props.theme.text};
 
   ${Box}:hover & {
@@ -75,7 +78,7 @@ const Item = {
   },
 };
 
-const BlogComponent = (props) => {
+const PortfolioComponent = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
   return (
     <Container variants={Item}>
@@ -93,4 +96,4 @@ const BlogComponent = (props) => {
   );
 };
 
-export default BlogComponent;
+export default PortfolioComponent;

@@ -3,7 +3,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { PowerBtn } from '../components/AllSvgs';
+import { BackBtn } from '../components/AllSvgs';
 
 const Power = styled.button`
   position: fixed;
@@ -27,8 +27,9 @@ const Power = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: rgba(0, 255, 0, 0.4);
-    box-shadow: 0 0 8px 6px rgba(0, 255, 0, 0.2);
+    color: #fcf6f4;
+    background-color: #ccac00;
+    box-shadow: 0 0 8px 6px rgba(204, 172, 0, 0.2);
   }
 
   & > *:first-child {
@@ -40,7 +41,7 @@ const Power = styled.button`
 const PowerButton = () => (
   <Power>
     <NavLink to="/">
-      <PowerBtn width={30} height={30} fill="currentColor" />
+      <BackBtn width={30} height={30} fill="currentColor" />
     </NavLink>
   </Power>
 );

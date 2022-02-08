@@ -1,3 +1,7 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-undef */
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Anchor, Link } from '../components/AllSvgs';

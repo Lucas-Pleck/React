@@ -42,7 +42,8 @@ const SubBox = styled.div`
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 100%;
+    width: 20vw;
+    min-width: 170px;
     height: auto;
   }
 `;
@@ -71,9 +72,9 @@ const Intro = () => (
     transition={{ type: 'spring', duration: 2, delay: 1 }}>
     <SubBox>
       <Text>
-        <h1>Agile DevOps</h1>
+        <h1>IT Manager</h1>
         <h3>Lucas Pleckspaen</h3>
-        <h6>Thrusted </h6>
+        <h6>Agile | Scrum | DevOps </h6>
       </Text>
     </SubBox>
     <SubBox>
@@ -81,7 +82,7 @@ const Intro = () => (
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}>
-        <img className="pic" src={Me} alt="Profile Pic" />
+        <img className="pic" src={Me} alt="Lucas Pleckspaen Profile Pict" />
       </motion.div>
     </SubBox>
   </Box>

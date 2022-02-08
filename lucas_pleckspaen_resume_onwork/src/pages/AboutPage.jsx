@@ -1,13 +1,13 @@
 import React from 'react';
 import styled, { keyframes, ThemeProvider } from 'styled-components';
-import { DarkTheme } from './Themes';
+import { DarkTheme } from '../components/Themes';
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
-
+import BackBtn from '../subComponents/BackButton';
+import ParticleAboutComponent from '../subComponents/ParticleAboutComponent';
 import BigTitle from '../subComponents/BigTitlte';
-import astronaut from '../../public/Images/lucas-pleckspaen-falling.png';
+import lucasPleckspaenFalling from '../../public/Images/lucas-pleckspaen-falling.png';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -22,7 +22,7 @@ const float = keyframes`
 100% { transform: translateY(-10px) }
 
 `;
-const Spaceman = styled.div`
+const LucasPleckspaenFalling = styled.div`
   position: absolute;
   top: 10%;
   right: 5%;
@@ -32,24 +32,25 @@ const Spaceman = styled.div`
     width: 100%;
     height: auto;
   }
+  z-index: 10;
 `;
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2.5rem;
   width: 50vw;
-  height: 70vh;
+  height: 72vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(0.6rem + 1vw);
+  font-size: calc(0.55rem + 1vw);
   backdrop-filter: blur(4px);
 
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 10rem;
+  top: 15rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
 `;
@@ -59,11 +60,12 @@ const AboutPage = () => (
     <Box>
       <LogoComponent theme="dark" />
       <SocialIcons theme="dark" />
-      <PowerButton />
+      <BackBtn />
 
-      <Spaceman>
-        <img src={astronaut} alt="spaceman" />
-      </Spaceman>
+      <LucasPleckspaenFalling>
+        <img src={lucasPleckspaenFalling} alt="LucasPleckspaenFalling" />
+      </LucasPleckspaenFalling>
+      <ParticleAboutComponent />
       <Main>
         I have a curious mind that makes me keen to learn, adapt and grow.
         <br />
@@ -78,7 +80,7 @@ const AboutPage = () => (
         technologies and methodologies on my own.
       </Main>
 
-      <BigTitle text="ABOUT" top="13%" left="21%" />
+      <BigTitle text="ABOUT" top="10%" left="20%" />
     </Box>
   </ThemeProvider>
 );

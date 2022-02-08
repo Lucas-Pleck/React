@@ -1,12 +1,12 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { lightTheme } from './Themes';
-import { Design, Develope } from './AllSvgs';
+import { lightTheme } from '../components/Themes';
+import { SoftSkills, HardSkills } from '../components/AllSvgs';
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
-
+import BackBtn from '../subComponents/BackButton';
+import ParticleSkillsComponent from '../subComponents/ParticleSkillsComponent';
 import BigTitle from '../subComponents/BigTitlte';
 
 const Box = styled.div`
@@ -29,7 +29,6 @@ const Main = styled.div`
   z-index: 3;
   line-height: 1.5;
   cursor: pointer;
-
   font-family: 'Ubuntu Mono', monospace;
   display: flex;
   flex-direction: column;
@@ -46,6 +45,8 @@ const Title = styled.h2`
   justify-content: center;
   align-items: center;
   font-size: calc(1em + 1vw);
+  font-weight: bold;
+  color: #084276;
 
   ${Main}:hover & {
     & > * {
@@ -82,10 +83,11 @@ const MySkillsPage = () => (
     <Box>
       <LogoComponent theme="light" />
       <SocialIcons theme="light" />
-      <PowerButton />
+      <BackBtn />
+      <ParticleSkillsComponent />
       <Main>
         <Title>
-          <Design width={40} height={40} /> Soft Skills
+          <SoftSkills width={40} height={40} /> Soft Skills
         </Title>
         <Description>jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.</Description>
         <Description>
@@ -104,7 +106,7 @@ const MySkillsPage = () => (
       </Main>
       <Main>
         <Title>
-          <Develope width={40} height={40} /> Hard Skills
+          <HardSkills width={40} height={40} /> Hard Skills
         </Title>
         <Description>
           jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk jfe fez fz zgf lffzpkpf zfzplk fzp^k
@@ -119,8 +121,7 @@ const MySkillsPage = () => (
           <p>jfe fez fz zgf lffzpkpf zfzplk fzp^k fzpkpk.</p>
         </Description>
       </Main>
-
-      <BigTitle text="SKILLS" top="80%" right="30%" />
+      <BigTitle text="SKILLS" top="80%" />
     </Box>
   </ThemeProvider>
 );

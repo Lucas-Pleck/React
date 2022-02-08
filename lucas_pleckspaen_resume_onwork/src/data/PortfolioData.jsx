@@ -1,6 +1,6 @@
 // blog data
 
-const Blogs = [
+const PortfolioDatas = [
   {
     id: 1,
     name: 'Build Website with ReactJS, Styled-components and GSAP for Scrolling Animations',
@@ -76,4 +76,4 @@ const Blogs = [
   },
 ];
 
-export default Blogs;
+export default PortfolioDatas;

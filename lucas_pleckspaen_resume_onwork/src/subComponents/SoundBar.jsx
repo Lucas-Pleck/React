@@ -40,10 +40,10 @@ const play = keyframes`
 }
 `;
 const Line = styled.span`
-  background: ${(props) => props.theme.text};
-  border: 1px solid ${(props) => props.theme.body};
+  background: white;
+  border: 1px solid #ccac00;
 
-  animation: ${play} 1s ease infinite;
+  animation: ${play} 2s ease infinite;
   animation-play-state: ${(props) => (props.click ? 'running' : 'paused')};
   height: 1rem;
   width: 2px;

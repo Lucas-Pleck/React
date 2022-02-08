@@ -1,5 +1,5 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import styled from 'styled-components';
 
 const Box = styled.div`
@@ -18,7 +18,7 @@ const ParticleSkillsComponent = () => (
       params={{
         particles: {
           number: {
-            value: 14,
+            value: 20,
             density: {
               enable: true,
               value_area: 800,
@@ -27,25 +27,87 @@ const ParticleSkillsComponent = () => (
           line_linked: {
             enable: false,
           },
+          collisions: {
+            enable: true,
+          },
           move: {
-            speed: 1,
-            out_mode: 'out',
+            direction: 'none',
+            enable: true,
+            outMode: 'bounce',
+            random: false,
+            speed: 2.2,
+            straight: false,
           },
           shape: {
-            type: ['image', 'circle'],
+            type: ['image'],
             image: [
               {
-                src: './public/Images/skills/ansible.png',
+                src: '/Images/skills/ansible.png',
                 height: 20,
                 width: 23,
               },
               {
-                src: './public/Images/skills/css.png',
+                src: '/Images/skills/css.png',
+                height: 23,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/docker.png',
+                height: 20,
+                width: 30,
+              },
+              {
+                src: '/Images/skills/git.png',
                 height: 20,
                 width: 20,
               },
               {
-                src: './public/Images/skills/docker.png',
+                src: '/Images/skills/html.png',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/java.png',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/kubernetes.png',
+                height: 20,
+                width: 30,
+              },
+              {
+                src: '/Images/skills/linux.png',
+                height: 20,
+                width: 30,
+              },
+              {
+                src: '/Images/skills/nextjs.png',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/nodejs.png',
+                height: 20,
+                width: 30,
+              },
+              {
+                src: '/Images/skills/python.png',
+                height: 30,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/react.png',
+                height: 20,
+                width: 20,
+              },
+              {
+                src: '/Images/skills/sql.png',
+                height: 20,
+                width: 30,
+              },
+              {
+                src: '/Images/skills/windows.png',
                 height: 20,
                 width: 20,
               },

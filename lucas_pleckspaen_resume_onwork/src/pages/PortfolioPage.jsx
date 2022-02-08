@@ -1,13 +1,14 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import img from '../../public/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import PowerButton from '../subComponents/PowerButton';
+import BackBtn from '../subComponents/BackButton';
 
-import Blogs from '../data/BlogData';
-import BlogComponent from './BlogComponent';
+import PortfolioDatas from '../data/PortfolioData';
+import PortfolioComponent from '../components/PortfolioComponent';
 import AnchorComponent from '../subComponents/Anchor';
 import BigTitle from '../subComponents/BigTitlte';
 
@@ -57,7 +58,7 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     const num = (window.innerHeight - 70) / 30;
-    setNumbers(parseInt(num));
+    setNumbers(parseInt(num, 10));
   }, []);
 
   return (
@@ -71,13 +72,13 @@ const PortfolioPage = () => {
       }}>
       <Container>
         <LogoComponent />
-        <PowerButton />
+        <BackBtn />
         <SocialIcons />
         <AnchorComponent number={numbers} />
         <Center>
           <Grid>
-            {Blogs.map((blog) => (
-              <BlogComponent key={blog.id} blog={blog} />
+            {PortfolioDatas.map((blog) => (
+              <PortfolioComponent key={blog.id} blog={blog} />
             ))}
           </Grid>
         </Center>

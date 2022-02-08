@@ -4,11 +4,11 @@ import { AnimatePresence } from 'framer-motion';
 import { lightTheme } from './components/Themes';
 import GlobalStyle from './globalStyles';
 
-import Main from './components/Main';
-import AboutPage from './components/AboutPage';
-import CareerPage from './components/PortfolioPage';
-import PortfolioPage from './components/CareerPage';
-import MySkillsPage from './components/MySkillsPage';
+import Main from './pages/Main';
+import AboutPage from './pages/AboutPage';
+import CareerPage from './pages/CareerPage';
+import PortfolioPage from './pages/PortfolioPage';
+import MySkillsPage from './pages/MySkillsPage';
 import SoundBar from './subComponents/SoundBar';
 
 const App = () => {

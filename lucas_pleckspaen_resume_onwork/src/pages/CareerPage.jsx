@@ -9,12 +9,13 @@ import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import BackBtn from '../subComponents/BackButton';
 import CareerTimeline from '../subComponents/CareerTimeline';
+import EducationTimeline from '../subComponents/EducationTimeline';
 
 import BigTitlte from '../subComponents/BigTitlte';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -22,12 +23,12 @@ const Box = styled.div`
 `;
 
 const Main = styled(motion.ul)`
-  height: 40vh;
-  width: 54vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   color: white;
-  margin-top: 4rem;
+  margin-top: 14rem;
 `;
 
 const container = {
@@ -51,17 +52,19 @@ const CareerPage = () => {
         <SocialIcons theme="dark" />
         <BackBtn />
         <Main ref={ref} variants={container} initial="hidden" animate="show">
-          <div>
-            <div className="h2 text-center text-4xl ml-10 bg-blue-400">Career</div>
+          <div className="text-[#ccac00] text-xs mt-12 mb-4 w-[40rem]">
+            <div className="h2 text-center text-white text-4xl bg-blue-400">Career</div>
             <CareerTimeline />
           </div>
-          <div>
-            <div className="h2 text-center text-4xl ml-10 bg-blue-400">Career</div>
-            <CareerTimeline />
+          <div className="text-[#ccac00] text-xs mt-12 mb-4 w-[40rem]">
+            <div className="h2 text-center text-white text-4xl bg-blue-400">
+              Education
+            </div>
+            <EducationTimeline />
           </div>
         </Main>
 
-        <BigTitlte text="WORK" top="10%" />
+        <BigTitlte text="WORK" top="5.6rem" />
       </Box>
     </ThemeProvider>
   );

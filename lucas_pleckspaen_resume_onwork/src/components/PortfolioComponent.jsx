@@ -2,19 +2,20 @@
 /* eslint-disable react/destructuring-assignment */
 import { motion } from 'framer-motion';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Box = styled(motion(NavLink))`
-  width: calc(10rem + 15vw);
+const Box = styled.div`
+  width: calc(16rem + 8vw);
+  height: fit-content;
+  margin: 2rem 2rem;
   text-decoration: none;
-  height: 20rem;
   padding: 1rem;
   color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.text};
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(40px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
 
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@ const Box = styled(motion(NavLink))`
 const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
-  height: 60%;
+  height: 185px;
   background-size: cover;
   border: 1px solid transparent;
   background-position: center center;
@@ -45,7 +46,7 @@ const Title = styled.h3`
   padding-top: 1rem;
   font-family: 'Zen Kurenaido', sans-serif;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 1.2em;
   border-bottom: 1px solid ${(props) => props.theme.text};
 
   ${Box}:hover & {
@@ -54,6 +55,7 @@ const Title = styled.h3`
 `;
 const HashTags = styled.div`
   padding: 0.5rem 0;
+  font-size: 0.9rem;
 `;
 const Tag = styled.span`
   padding-right: 0.5rem;
@@ -79,18 +81,21 @@ const Item = {
 };
 
 const PortfolioComponent = (props) => {
-  const { name, tags, date, imgSrc, link } = props.blog;
+  const { name, tags, date, imgSrc, link } = props.data;
+  console.log(link);
   return (
     <Container variants={Item}>
-      <Box target="_blank" to={{ pathname: link }}>
-        <Image img={imgSrc} />
-        <Title>{name}</Title>
-        <HashTags>
-          {tags.map((t, id) => (
-            <Tag key={id}>#{t}</Tag>
-          ))}
-        </HashTags>
-        <Date>{date}</Date>
+      <Box>
+        <a href={link} target="_blank" rel="noreferrer">
+          <Image img={imgSrc} />
+          <Title>{name}</Title>
+          <HashTags>
+            {tags.map((t, id) => (
+              <Tag key={id}>#{t}</Tag>
+            ))}
+          </HashTags>
+          <Date>{date}</Date>
+        </a>
       </Box>
     </Container>
   );

@@ -9,7 +9,7 @@ const Logo = styled.h1`
   font-family: 'Zen Kurenaido';
 
   position: fixed;
-  left: 2rem;
+  left: calc(0.2rem + 2vw);
   top: 2rem;
   z-index: 3;
 `;

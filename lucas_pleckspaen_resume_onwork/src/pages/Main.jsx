@@ -34,7 +34,7 @@ const Contact = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 2rem;
-  right: calc(1rem + 6vw);
+  right: calc(0.2rem + 2vw);
   text-decoration: none;
   z-index: 1;
 `;

@@ -15,6 +15,8 @@ const Box = styled.div`
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 `;
 const float = keyframes`
 0% { transform: translateY(-10px) }
@@ -38,21 +40,18 @@ const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2.5rem;
-  width: 50vw;
-  height: 72vh;
+  width: 80%;
+  height: 74vh;
   z-index: 3;
   line-height: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(0.55rem + 1vw);
-  backdrop-filter: blur(4px);
 
-  position: absolute;
-  left: calc(5rem + 5vw);
-  top: 15rem;
+  backdrop-filter: blur(4px);
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+  margin-top: 11rem;
 `;
 
 const AboutPage = () => (
@@ -66,7 +65,7 @@ const AboutPage = () => (
         <img src={lucasPleckspaenFalling} alt="LucasPleckspaenFalling" />
       </LucasPleckspaenFalling>
       <ParticleAboutComponent />
-      <Main>
+      <Main className="lg:text-3xl text-sm">
         I have a curious mind that makes me keen to learn, adapt and grow.
         <br />
         My experience as a marketeer, webshop owner, sales representative and area manager
@@ -80,7 +79,7 @@ const AboutPage = () => (
         technologies and methodologies on my own.
       </Main>
 
-      <BigTitle text="ABOUT" top="10%" left="20%" />
+      <BigTitle text="ABOUT" top="5.6rem" />
     </Box>
   </ThemeProvider>
 );

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import img from '../../public/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg';
+import img from '../../public/Images/blue-trianglify-8e4a0501.jpg';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import BackBtn from '../subComponents/BackButton';
@@ -20,10 +20,10 @@ const MainContainer = styled(motion.div)`
   background-position: center;
 `;
 const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
+  min-height: 100vh;
   width: 100%;
   height: auto;
-
+  opacity: 0.95;
   position: relative;
   padding-bottom: 5rem;
 `;
@@ -32,13 +32,16 @@ const Center = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10rem;
+  padding-top: calc(10rem + 15vh);
+  width: 80%;
+  margin: 0 auto;
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-  grid-gap: calc(1rem + 2vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -4rem;
 `;
 
 const container = {
@@ -77,12 +80,12 @@ const PortfolioPage = () => {
         <AnchorComponent number={numbers} />
         <Center>
           <Grid>
-            {PortfolioDatas.map((blog) => (
-              <PortfolioComponent key={blog.id} blog={blog} />
+            {PortfolioDatas.map((data) => (
+              <PortfolioComponent key={data.id} data={data} />
             ))}
           </Grid>
+          <BigTitle text="Portfolio" top="5.6rem" />
         </Center>
-        <BigTitle text="BLOG" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );

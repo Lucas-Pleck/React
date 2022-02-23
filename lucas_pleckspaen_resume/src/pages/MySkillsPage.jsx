@@ -9,6 +9,8 @@ import SocialIcons from '../subComponents/SocialIcons';
 import BackBtn from '../subComponents/BackButton';
 import ParticleSkillsComponent from '../subComponents/ParticleSkillsComponent';
 import BigTitle from '../subComponents/BigTitlte';
+import HardSkillsComponent from '../components/HardSkillsComponent';
+import SoftSkillsComponent from '../components/SoftSkillsComponent';
 // import SoftSkillsData from '../data/SoftSkillsData';
 // import HardSkillsData from '../data/HardSkillsData';
 
@@ -60,6 +62,7 @@ const Title = styled.h2`
   ${SkillsContainer}:hover & {
     & > * {
       fill: '${(props) => props.theme.body}';
+      text-color=white;
     }
   }
 
@@ -76,14 +79,18 @@ const MySkillsPage = () => (
       <BackBtn />
       <ParticleSkillsComponent />
       <SkillsContainer>
-        <Title>
-          <SoftSkills width={40} height={40} /> Soft Skills
-        </Title>
+        <div className="w-1/2 flex justify-around">
+          <SoftSkills width={50} height={50} />
+          <Title>Soft Skills</Title>
+        </div>
+        <SoftSkillsComponent />
       </SkillsContainer>
       <SkillsContainer>
-        <Title>
-          <HardSkills width={40} height={40} /> Hard Skills
-        </Title>
+        <div className="w-1/2 flex justify-around">
+          <HardSkills width={50} height={50} />
+          <Title>Hard Skills</Title>
+        </div>
+        <HardSkillsComponent />
       </SkillsContainer>
       <BigTitle text="SKILLS" top="80%" />
     </Box>
